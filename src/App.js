@@ -10,6 +10,7 @@ function App() {
   const [awayScore, setAwayScore] = useState(0);
   const homeTeam = '49ers'
   const awayTeam = 'Cowboys'
+  const [quarters, setQuarters] = useState(1);
 
   return (
     <div className="container">
@@ -27,7 +28,7 @@ function App() {
             <div className="away__score">{awayScore}</div>
           </div>
         </div>
-        <BottomRow />
+        <BottomRow quarters = {quarters} setQuarters = {setQuarters}/>
       </section>
       <section className="buttons">
         <div className="homeButtons">
